@@ -11,3 +11,5 @@ Each line in the Hymnal should be one line in the file after the hymn number.
 Go to the Gesangbuch web page and copy the entire song into the file. Then just press Enter for each new line.
 
 Then run \text2ppt\text2ppt.py
+
+The powerpoint file in the \resources\ folder has now changed.
