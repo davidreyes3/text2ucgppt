@@ -40,7 +40,7 @@ def load_hymn_text():
 with open(HYMN_SLIDE_JSON_PATH) as json_file:
     hymn_slide_json = json.load(json_file)
 
-print(hymn_slide_json)
+#print(hymn_slide_json)
 
 prs = Presentation(ABS_PATH)
 
@@ -57,9 +57,9 @@ os.rename(dst_file, new_dst_file_name)  #rename
 
 # get start and end slide numbers
 start = hymn_slide_json[hymn_number - 1]['slide']  # [0][0] because it's a list of a list
-print(start)
+#print(start)
 end = hymn_slide_json[hymn_number]['slide']
-print(end)
+#print(end)
 
 slides = prs.slides
 
@@ -67,19 +67,19 @@ slides = prs.slides
 i = 0
 for slide_index in range(start-1, end-2):  # end-2 because the slide between hymns is empty and would result in out of range error
     slide = slides[slide_index]
-    print(slide_index)
+    #print(slide_index)
     i = i+1
     #slide = slides[0]
     shape = slide.shapes[0] # always the 0th shape
     if shape.has_text_frame:
         text_frame = shape.text_frame
-        print(len(text_frame.paragraphs))
+        #print(len(text_frame.paragraphs))
         text = text_frame.paragraphs[0].text # only ever one paragraph
-        print('FANCY TEXT: ', text)
+        #print('FANCY TEXT: ', text)
 
         shape.text = hymn_text[i][0]  # more silliness with list in lists
         text = text_frame.paragraphs[0].text
-        print('FANCY TEXT neu: ', text)
+        #print('FANCY TEXT neu: ', text)
     else:
         print('NO TEXT')
 
