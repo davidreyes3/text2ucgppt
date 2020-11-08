@@ -10,7 +10,6 @@ from pptx import Presentation
 
 DIR = 'C:/dev/text2ucgppt/resources'
 FILENAME = 'UCG-Hymnal-Lyrics-windows.pptx'
-FILENAME_TEST = 'UCG-Hymnal-Lyrics-windows_TEST.pptx'
 
 ABS_PATH = DIR+'/'+FILENAME
 
